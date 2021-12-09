@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Project Submission form</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}">
+    </header>
+    <body>
+
+        <div class="Subform"><h1> Project Submission Form </h1></div>
+        <div class="happy"> 
+            <form action="/add  method = POST"; enctype="multipart/form-data">  {% csrf_token %} 
+                <div id="name">
+                    <!-- <h2 class="name">Group name</h2> -->
+                    <input class="group_name" type="text" name="groupname" placeholder="Group name"><br>
+                    <label class="Grouplable">Group name</label>
+                    <input class="Name_of_student" type="placeholder" name="nameofstudents" placeholder="Name of students">
+                    <label class="Namelable">Name of student's in group</label>
+                </div>
+                
+               
+                <input class="Number_of_students" type="number" name="numberofstudents" placeholder="Number of students">
+                <label class="Numberlable">Number of student's</label>
+                  
+                <input class="ProjectName" type="text" name="projectname" placeholder="Project name">
+                <label class="Projectlable">Project Name</label>
+
+                <input class="Projecttype" type="text" name="projecttype" placeholder="Project type">
+                <label class="typelabel">Project type</label>
+                
+                <input class="Upload" type="file" name="myfile">
+                <label class="Uploadlabel">Uploadproject</label>
+
+                <button class="submit" type="submit">submit</button>
+            </form>
+    </body>
+</html>
